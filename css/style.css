@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito",sans-serif;
+}
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+    --font:'Pacifico', cursive;
+}
+
+
+/* start header */
+
+
+.navbar-dark .navbar-nav .nav-link ,
+.dropbtn{
+  position: relative;
+  margin-left: 25px;
+  padding: 35px 0;
+  font-size: 15px;
+  color: var(--light) !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: none;
+  transition: .5s;
+}
+
+
+.dropbtn{
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    border: none;
+    margin: 0 5px 5px 5px;
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    font-size: 15px;
+    color: var(--light) !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+    transition: .5s;
+}
+
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+  padding: 20px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--primary) !important;
+}
+
+.navbar-dark .navbar-brand img {
+  max-height: 60px;
+  transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-brand img {
+  max-height: 45px;
+}
+
+
+.colse{
+  display: none;
+}
+
+
+.dropbtn::before{
+  position: absolute;
+  content: '';
+  left: 55px;
+  top: 44%;
+  transform: rotate(-90deg);
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 5px 6px 5px 0;
+  border-color: transparent #ffffff transparent transparent;  
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #e1e1e1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: var(--primary);
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--primary);
+}
+.navbar-toggler:hover{
+color: var(--primary);
+}
+@media (max-width: 991.98px){
+  .navbar-dark{
+    position: relative;
+  }
+
+  .navbar-dark .navbar-collapse{
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, .1)
+  }
+  .navbar-dark .navbar-nav .nav-link,
+  .sticky-top.navbar-dark .navbar-nav .nav-link {
+      padding: 10px 0;
+      margin-left: 0;
+  }
+  .navbar-dark .navbar-brand img {
+    max-height: 45px;
+}
+.dropdown-content {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+ background-color: #f1f8ffd9;
+}
+}
+
+@media (min-width: 990px){
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+}
+
+
+.hero-header {
+  background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-header img{
+  animation: imgRounded  50s linear infinite;
+}
+@keyframes imgRounded{
+100%{
+  transform: rotate(360deg);
+}
+};
+
+
+
+/* start service */
+
+.service-item{
+box-shadow:  0 0 45px rgba(0,0,0,0.8);
+transition: 0.5s;
+}
+.service-item *{
+  transition: 0.5s;
+  }
+.service-item:hover{
+background-color: var(--primary);
+color: var(--light) !important;
+  }
+  .service-item:hover *{
+    color: var(--light) !important;
+      }
+
+
+  /*about start  */
+    
+
+.section-text{
+  position: relative;
+  display: inline-block;
+  font-family: var(--font);
+}
+.section-text::before{
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  left: -55px;
+  margin-top: -1px;
+  background: var(--primary);
+}
+.section-text::after{
+  position: absolute;
+  content: '';
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  right: -55px;
+  color: var(--primary);
+  margin-top: -1px;
+  background: var(--primary);
+}
+
+.im-2{
+  width: 75% !important;
+  margin-top: 70px;
+}
+.im-3{
+  width: 75% !important;
+  margin-left: 70px;
+}
+.res-form{
+margin-left: 50px;
+}
+/* menu */
+
+.nav-menu .nav-item .active{
+  border-bottom: 2px solid var(--primary) !important;
+}
+
+#tab-three{
+  display: none;
+}
+#tap-two{
+  
+  display: none;
+
+}
+
+/* form & video */
+
+.videoModal{
+  margin-top: 15%;
+}
+video{
+  max-width: 100%;
+}
+
+/* start team */
+
+.team-item{
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  background-color: var(--light);
+  height: calc(100% - 38px);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.team-item:hover{
+  height: 100% ;
+  box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.66);
+  -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.66);
+  -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.66);
+}
+.team-item img{
+  transition: 0.5s;
+  cursor: pointer;
+}
+.team-item:hover img{
+ transform: scale(1.1);
+}
+  .team-item .btn-square{
+ border-top-right-radius: 38px;
+ border-top-left-radius: 38px;
+ padding-bottom: 7px;
+  }
+
+
+  /* start testimonial */
+
+  .testimonial-carousel .owl-item .testimonial-item,
+  .testimonial-carousel .owl-item.center .testimonial-item * {
+    transition: .5s;
+  }
+  .testimonial-carousel .testimonial-item{
+    cursor: pointer;
+  }
+  .testimonial-carousel .testimonial-item-active{
+    color: var(--light) !important;
+    background: var(--primary) !important;
+    background-color: var(--primary) !important;
+    cursor: pointer;
+  }
+
+  .next-act{
+   padding: 10px;
+  }
+
+  .testimonial-carousel .owl-dots{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial-carousel .owl-dot{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--light);
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  .testimonial-carousel .owl-dots .activee{
+    background: var(--primary);
+    border-color: var(--primary);
+    cursor: pointer;
+  }
+  .testimonial-carousel .owl-dot:hover{
+    background: var(--primary);
+    border-color: var(--primary);
+    cursor: pointer;
+  } 
+
+  .back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+    cursor: pointer;
+}
